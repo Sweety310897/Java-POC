@@ -1,0 +1,12 @@
+
+v
+java:S2095"HUse try-with-resources or close this "Connection" in a "finally" clause.(Şˆñå8î»Úœ.H’RBLOCKERZBUG
+e
+java:S4925"-Remove this "Class.forName()", it is useless.(¹µÖÁüÿÿÿÿ8î»Úœ.H“RMAJORZ
+CODE_SMELL
+z
+java:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(íñéşÿÿÿÿ8î»Úœ.H‘RBLOCKERZBUG
+k	java:S106"9Replace this use of System.out or System.err by a logger.(„ÄÙ÷8î»Úœ.H•RMAJORZ
+CODE_SMELL
+a
+java:S2115")Add password protection to this database.(Şˆñå8î»Úœ.H”RBLOCKERZVULNERABILITY

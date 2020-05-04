@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="com.shivani.examples.Dog"/>
+    <fullyQualifiedTypeName name="com.shivani.examples.Cat"/>
+    <fullyQualifiedTypeName name="com.shivani.robots.CleaningRobot"/>
+    <fullyQualifiedTypeName name="com.shivani.robots.MurderRobot"/>
+    <fullyQualifiedTypeName name="com.shivani.examples.Circle"/>
+    <fullyQualifiedTypeName name="com.shivani.interfaces.Shape"/>
+    <fullyQualifiedTypeName name="com.shivani.examples.Rectangle"/>
+    <fullyQualifiedTypeName name="java.lang.RuntimeException"/>
+    <fullyQualifiedTypeName name="com.shivani.interfaces.InputReader"/>
+    <fullyQualifiedTypeName name="com.shivani.bank.services.ConsoleReader"/>
+    <fullyQualifiedTypeName name="com.shivani.bank.services.FileReader"/>
+    <fullyQualifiedTypeName name="com.shivani.bank.interfaces.InputReader"/>
+    <fullyQualifiedTypeName name="com.shivani.bank.services.PropertyFileReader"/>
+    <fullyQualifiedTypeName name="java.util.regex.Pattern"/>
+    <fullyQualifiedTypeName name="java.util.regex.Matcher"/>
+    <fullyQualifiedTypeName name="java.io.File"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="com.shivani.bank.interfaces.AccountOperations"/>
+    <fullyQualifiedTypeName name="java.util.logging.LogManager"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="java.util.Map"/>
+    <fullyQualifiedTypeName name="com.shivani.bank.models.Bank"/>
+    <fullyQualifiedTypeName name="com.shivani.bank.validations.InputValidations"/>
+    <fullyQualifiedTypeName name="java.util.logging.Logger"/>
+    <fullyQualifiedTypeName name="java.util.logging.Level"/>
+    <fullyQualifiedTypeName name="com.shivani.bank.models.BankAccount"/>
+    <fullyQualifiedTypeName name="com.shivani.bank.exceptions.AccountDetailsException"/>
+    <fullyQualifiedTypeName name="com.shivani.bank.exceptions.BalanceException"/>
+    <fullyQualifiedTypeName name="java.io.FileInputStream"/>
+    <fullyQualifiedTypeName name="java.util.Properties"/>
+    <fullyQualifiedTypeName name="java.util.Enumeration"/>
+    <fullyQualifiedTypeName name="java.io.FileNotFoundException"/>
+    <fullyQualifiedTypeName name="java.io.IOException"/>
+    <fullyQualifiedTypeName name="java.sql.DriverManager"/>
+    <fullyQualifiedTypeName name="java.sql.Connection"/>
+    <fullyQualifiedTypeName name="java.sql.SQLException"/>
+    <fullyQualifiedTypeName name="java.sql.Statement"/>
+</qualifiedTypeNameHistroy>

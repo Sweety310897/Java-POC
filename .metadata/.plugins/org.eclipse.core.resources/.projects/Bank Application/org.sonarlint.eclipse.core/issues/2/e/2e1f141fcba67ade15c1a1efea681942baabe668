@@ -1,0 +1,11 @@
+
+{
+java:S2095l"MUse try-with-resources or close this "FileInputStream" in a "finally" clause.(´õÄÎ8íÄìÒœ.HïRBLOCKERZBUG
+o
+java:S2629,"7Use the built-in formatting to construct this argument.(£ãÆŒùÿÿÿÿ8íÄìÒœ.HğRMAJORZ
+CODE_SMELL
+j
+java:S2696+"6Make the enclosing method "static" or remove this set.(Ç½ª’ÿÿÿÿÿHìRCRITICALZ
+CODE_SMELL
+_
+java:S1148†"#Use a logger to log this exception.(Âşÿâûÿÿÿÿ8íÄìÒœ.HñRMINORZVULNERABILITY

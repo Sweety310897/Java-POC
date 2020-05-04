@@ -1,0 +1,8 @@
+package com.shivani.bank.jdbc;
+
+public class createTable {
+	
+	public static void main(String[] args) throws ClassNotFoundException, SQLException{
+		
+	}
+}

@@ -1,0 +1,25 @@
+
+w	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(†úòº8Ð¬ Ïœ.H
+RMAJORZ
+CODE_SMELL
+o	java:S106"9Replace this use of System.out or System.err by a logger.(à—ª©þÿÿÿÿ8Ð¬ Ïœ.HRMAJORZ
+CODE_SMELL
+j	java:S106
+"9Replace this use of System.out or System.err by a logger.(½Ú¹°8Ð¬ Ïœ.HRMAJORZ
+CODE_SMELL
+j	java:S106"9Replace this use of System.out or System.err by a logger.(çï´Ï8Ð¬ Ïœ.HRMAJORZ
+CODE_SMELL
+j	java:S106"9Replace this use of System.out or System.err by a logger.(²µÙÐ8Ð¬ Ïœ.HRMAJORZ
+CODE_SMELL
+j	java:S106"9Replace this use of System.out or System.err by a logger.(í¾Á¨8Ð¬ Ïœ.HRMAJORZ
+CODE_SMELL
+o	java:S106"9Replace this use of System.out or System.err by a logger.(ü–ü¨ûÿÿÿÿ8Ð¬ Ïœ.HRMAJORZ
+CODE_SMELL
+ž
+java:S1130"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(†úòº8Ð¬ Ïœ.HRMINORZ
+CODE_SMELL
+j	java:S106"9Replace this use of System.out or System.err by a logger.(ïˆì¦8Ð¬ Ïœ.HRMAJORZ
+CODE_SMELL
+f
+java:S1144"4Remove this unused private "checkForPrivate" method.(°´Ùä8Ð¬ Ïœ.HRMAJORZ
+CODE_SMELL

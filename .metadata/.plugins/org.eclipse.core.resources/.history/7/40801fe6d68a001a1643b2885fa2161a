@@ -1,0 +1,13 @@
+package com.shivani.bank.jdbc;
+
+import java.sql.DriverManager;
+
+public class createTable {
+	
+	public static void main(String[] args) throws ClassNotFoundException, SQLException{
+
+		Class.forName("com.mysql.jdbc.Driver");
+
+		Connection con = DriverManager.getConnection("","","");
+	}
+}

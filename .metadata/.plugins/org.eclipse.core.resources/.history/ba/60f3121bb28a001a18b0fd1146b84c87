@@ -1,0 +1,23 @@
+package com.shivani.robots;
+
+import com.shivani.services.Dog;
+import com.shivani.services.MurderRobot;
+
+public class MurderRobotDog {
+	Dog d;
+	MurderRobot r;
+	MurderRobotDog() {
+		r = new MurderRobot();
+		d = new Dog();
+		
+	}
+	public void bark() {
+		d.bark();
+	}
+	public void kill() {
+		r.kill();
+	}
+	public void drive() {
+		r.drive();
+	}
+}

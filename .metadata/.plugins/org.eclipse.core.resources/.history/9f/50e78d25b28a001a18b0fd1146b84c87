@@ -1,0 +1,30 @@
+package com.shivani.services;
+
+public class TestComposition {
+
+}
+
+class CleaningRobot extends Robot{
+	Robot r;
+	public void clean() {
+		System.out.println("robot is cleaning");
+	}
+}
+
+
+class Animal {
+	public void eat() {
+		System.out.println("Animal is eat");
+	}
+}
+class Dog extends Animal{
+	public void bark() {
+		System.out.println("dog is barking");
+	}
+}
+class Cat extends Animal{
+	public void meow() {
+		System.out.println("cat is meow");
+	}
+}
+

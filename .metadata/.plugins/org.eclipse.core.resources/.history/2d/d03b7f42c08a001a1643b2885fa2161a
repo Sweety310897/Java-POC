@@ -1,0 +1,5 @@
+package com.shivani.interfaces;
+
+public interface AccountOperations {
+
+}

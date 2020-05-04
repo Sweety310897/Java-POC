@@ -1,0 +1,10 @@
+package com.shivani.robots;
+
+import com.shivani.services.Robot;
+
+public class CleaningRobot extends Robot{
+	Robot r;
+	public void clean() {
+		System.out.println("robot is cleaning");
+	}
+}
