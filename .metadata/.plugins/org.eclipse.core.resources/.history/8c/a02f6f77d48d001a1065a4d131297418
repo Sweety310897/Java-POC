@@ -105,7 +105,7 @@ public class PropertyFileReader implements InputReader{
 	public void readInput() {
 		
 		  try { 
-			  	FileInputStream fis = new FileInputStream("resources/input.properties");
+			  	FileInputStream fis = new FileInputStream("src/com/shivani/bank/resources/input.properties");
 				Properties prop = new Properties();
 					prop.load(fis);
 					Enumeration e = prop.propertyNames();

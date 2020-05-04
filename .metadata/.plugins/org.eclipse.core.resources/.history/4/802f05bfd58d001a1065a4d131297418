@@ -76,7 +76,7 @@ public class FileReader implements InputReader{
 		@Override
 		public void readInput() {
 			  try { 
-				  File file = new File("resources/inputs.txt");
+				  File file = new File("src/com/shivani/bank/resources/inputs.txt");
 				  Scanner myReader = new Scanner(file);					
 				  while (myReader.hasNextLine()) {
 					      String fileData = myReader.nextLine();
