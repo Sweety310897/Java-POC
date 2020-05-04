@@ -10,6 +10,7 @@ import com.shivani.bank.exceptions.BalanceException;
 import com.shivani.bank.interfaces.InputReader;
 import com.shivani.bank.models.Bank;
 import com.shivani.bank.models.BankAccount;
+import com.shivani.bank.models.Customer;
 import com.shivani.bank.validations.InputValidations;
 
 public class ConsoleReader implements InputReader{
