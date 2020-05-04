@@ -10,7 +10,6 @@ import com.shivani.bank.exceptions.BalanceException;
 import com.shivani.bank.interfaces.InputReader;
 import com.shivani.bank.models.Bank;
 import com.shivani.bank.models.BankAccount;
-import com.shivani.bank.models.Customer;
 import com.shivani.bank.validations.InputValidations;
 
 public class ConsoleReader implements InputReader{
@@ -44,7 +43,6 @@ public class ConsoleReader implements InputReader{
 			if(shivaniBank.getSocialSecurityAccount().containsKey(aadarNumber)) {
 				log.log(Level.INFO, "Sorry Account already exists with account number: " + shivaniBank.getAccWithSSN(aadarNumber));
 			} else {
-				
 				shivaniBank.createNewAccount(new BankAccount(accountNumber++, custName, bankAccType-1, custMobileNo, custEmail, aadarNumber));
 				log.log(Level.INFO," -> Account created with account number: " + (accountNumber-1)); 
 			    

@@ -44,6 +44,7 @@ public class ConsoleReader implements InputReader{
 			if(shivaniBank.getSocialSecurityAccount().containsKey(aadarNumber)) {
 				log.log(Level.INFO, "Sorry Account already exists with account number: " + shivaniBank.getAccWithSSN(aadarNumber));
 			} else {
+				Customer customer = new Customer(custName,custMobileNo,custEmail, aadarNumber);
 				
 				shivaniBank.createNewAccount(new BankAccount(accountNumber++, custName, bankAccType-1, custMobileNo, custEmail, aadarNumber));
 				log.log(Level.INFO," -> Account created with account number: " + (accountNumber-1)); 

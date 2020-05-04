@@ -1,0 +1,32 @@
+package com.shivani.bank.models;
+
+public class Customer {
+	private String custName;
+	private String custPhoneNo;
+	private String custEmailId;
+	private String ssn;
+	public Customer(String custName,String custPhoneNo, String custEmailId, String ssn) {
+//		super(accNumber, custName, accType, ssn);
+		this.custName = custName;
+		this.custPhoneNo = custPhoneNo;
+		this.custEmailId = custEmailId;
+	}
+	
+	public String getCustName() {
+		return this.custName;
+	}
+	
+	public String getCustPhone() {
+		return this.custPhoneNo;
+	}
+	public String getCustEmail() {
+		return this.custEmailId;
+	}
+	public String getSSN() {
+		return this.custPhoneNo;
+	}
+	
+	
+
+
+}
