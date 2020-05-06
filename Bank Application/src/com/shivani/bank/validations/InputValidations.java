@@ -12,12 +12,20 @@ public class InputValidations {
 	LogManager lgmngr = LogManager.getLogManager(); 
 	Logger log = lgmngr.getLogger(Logger.GLOBAL_LOGGER_NAME);
 	
-	
+	/*
+	 * validate the customer name
+	 */
 	public void checkName(String name) {
-        if (name == null || !name.matches("[a-zA-Z]+")) {
+    
+		if (name == null || !name.matches("[a-zA-Z]+")) {
             throw new AccountDetailsException("Please enter your name in valid format");
         } 
+	
 	}
+	
+	/*
+	 * validate the customer mobile number
+	 */
 	public void checkPhoneNum(String phoneNum) {
 		
 		Pattern pattern = Pattern.compile("(0/91)?[7-9][0-9]{9}");		  
@@ -28,13 +36,22 @@ public class InputValidations {
 		else {
 			throw new AccountDetailsException("Check your entered Phone number"); 
 		}
+	
 	}
+	
+	/*
+	 * validate the account type selected by the customer
+	 */
 	public void checkAccType(int accType) {
+		
 			if(accType<1 || accType > 4) {
 				throw new AccountDetailsException("Select valid number greater than 1 or less than 4");
 			}
 	}
 
+	/*
+	 * validate the email
+	 */
 	public void checkEmail(String email) {
 		 
 		String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\."+ 
@@ -46,6 +63,7 @@ public class InputValidations {
 		if (email == null || !pattern.matcher(email).matches()) {
 			throw new AccountDetailsException("Check your entered email");
 		}
+	
 	}
 
 }

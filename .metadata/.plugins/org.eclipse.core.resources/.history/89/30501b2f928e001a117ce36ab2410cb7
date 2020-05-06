@@ -1,0 +1,11 @@
+package com.shivani.bank.models;
+
+import java.util.logging.Level;
+
+public class BankOperations {
+	int accountNumber;String custName; 
+	int bankAccType; String custMobileNo; String custEmail; String aadarNumber;
+	public void add(int accountNumber, String custName,int bankAccType,String custMobileNo,String custEmail,String aadarNumber) {
+		
+	}
+}

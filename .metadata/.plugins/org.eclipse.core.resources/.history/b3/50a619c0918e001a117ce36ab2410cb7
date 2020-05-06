@@ -1,0 +1,18 @@
+package com.shivani.bank.models;
+
+import java.util.logging.Level;
+
+public class BankOperations {
+	int accountNumber;String custName; 
+	int bankAccType; String custMobileNo; String custEmail; String aadarNumber;
+	public void addAccount(accountNumber++, custName, bankAccType-1, custMobileNo, custEmail, aadarNumber) {
+		if(shivaniBank.getSocialSecurityAccount().containsKey(aadarNumber)) {
+			log.log(Level.INFO, "Sorry Account already exists with account number: " + shivaniBank.getAccWithSSN(aadarNumber));
+		} else {
+			BankAccount bankaccount = new BankAccount(accountNumber++, custName, bankAccType-1, custMobileNo, custEmail, aadarNumber);
+			shivaniBank.createNewAccount(bankaccount);
+			log.log(Level.INFO," -> Account created with account number: " + (accountNumber-1)); 
+		    
+		}
+	}
+}

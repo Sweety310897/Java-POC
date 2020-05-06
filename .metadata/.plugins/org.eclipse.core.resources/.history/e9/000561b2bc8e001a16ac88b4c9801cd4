@@ -1,0 +1,11 @@
+addAccount 500 Shivani 1 1234 9640770108 pulluri@gmail.com
+addAccount 501 ShivaKumar 2 1235 9550000957 shiva@gmail.com
+addAccount 502 12345 2 1235 9550000957 vani@gmail.com
+displayAll
+searchByAccount 500
+searchByAccount 999
+depositAmount 500 1200
+depositAmount 500 -200
+withDrawAmount 500 200
+withDrawAmount 500 -200
+displayAll

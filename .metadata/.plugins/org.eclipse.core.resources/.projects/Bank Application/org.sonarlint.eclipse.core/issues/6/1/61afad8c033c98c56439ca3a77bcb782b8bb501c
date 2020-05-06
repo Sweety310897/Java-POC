@@ -1,0 +1,16 @@
+
+U
+java:S1659")Declare "aadarNumber" on a separate line.(ς»HπRMINORZ
+CODE_SMELL
+R
+java:S1659"&Declare "custName" on a separate line.(λΫάρHνRMINORZ
+CODE_SMELL
+V
+java:S1659"*Declare "custMobileNo" on a separate line.(ς»HοRMINORZ
+CODE_SMELL
+o
+java:S2629""7Use the built-in formatting to construct this argument.(χώ£ψÿÿÿÿ8βª‚©.HιRMAJORZ
+CODE_SMELL
+S
+java:S1659"'Declare "custEmail" on a separate line.(ς»HμRMINORZ
+CODE_SMELL

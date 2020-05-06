@@ -9,7 +9,6 @@
     <fullyQualifiedTypeName name="com.shivani.examples.Rectangle"/>
     <fullyQualifiedTypeName name="java.lang.RuntimeException"/>
     <fullyQualifiedTypeName name="com.shivani.interfaces.InputReader"/>
-    <fullyQualifiedTypeName name="com.shivani.bank.services.ConsoleReader"/>
     <fullyQualifiedTypeName name="com.shivani.bank.services.FileReader"/>
     <fullyQualifiedTypeName name="com.shivani.bank.interfaces.InputReader"/>
     <fullyQualifiedTypeName name="com.shivani.bank.services.PropertyFileReader"/>
@@ -21,11 +20,8 @@
     <fullyQualifiedTypeName name="java.util.logging.LogManager"/>
     <fullyQualifiedTypeName name="java.util.HashMap"/>
     <fullyQualifiedTypeName name="java.util.Map"/>
-    <fullyQualifiedTypeName name="com.shivani.bank.models.Bank"/>
     <fullyQualifiedTypeName name="com.shivani.bank.validations.InputValidations"/>
     <fullyQualifiedTypeName name="java.util.logging.Logger"/>
-    <fullyQualifiedTypeName name="java.util.logging.Level"/>
-    <fullyQualifiedTypeName name="com.shivani.bank.models.BankAccount"/>
     <fullyQualifiedTypeName name="com.shivani.bank.exceptions.AccountDetailsException"/>
     <fullyQualifiedTypeName name="com.shivani.bank.exceptions.BalanceException"/>
     <fullyQualifiedTypeName name="java.io.FileInputStream"/>
@@ -37,4 +33,17 @@
     <fullyQualifiedTypeName name="java.sql.Connection"/>
     <fullyQualifiedTypeName name="java.sql.SQLException"/>
     <fullyQualifiedTypeName name="java.sql.Statement"/>
+    <fullyQualifiedTypeName name="com.shivani.bank.models.Customer"/>
+    <fullyQualifiedTypeName name="com.shivani.bank.services.ConsoleReader"/>
+    <fullyQualifiedTypeName name="java.util.logging.Level"/>
+    <fullyQualifiedTypeName name="com.shivani.bank.models.BankOperations"/>
+    <fullyQualifiedTypeName name="com.shivani.bank.models.Bank"/>
+    <fullyQualifiedTypeName name="com.shivani.bank.models.BankAccount"/>
+    <fullyQualifiedTypeName name="com.shivani.bank.services.BankOperations.Day"/>
+    <fullyQualifiedTypeName name="com.shivani.bank.services.BankOperations.Weekday"/>
+    <fullyQualifiedTypeName name="java.io.BufferedReader"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.awt.List"/>
+    <fullyQualifiedTypeName name="java.util.Collections"/>
+    <fullyQualifiedTypeName name="com.shivani.bank.services.BankOperations.Choices"/>
 </qualifiedTypeNameHistroy>

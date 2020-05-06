@@ -1,11 +1,8 @@
 
-{
-java:S2095l"MUse try-with-resources or close this "FileInputStream" in a "finally" clause.(´õÄÎ8íÄìÒœ.HïRBLOCKERZBUG
-o
-java:S2629,"7Use the built-in formatting to construct this argument.(£ãÆŒùÿÿÿÿ8íÄìÒœ.HðRMAJORZ
-CODE_SMELL
-j
-java:S2696+"6Make the enclosing method "static" or remove this set.(Ç½ª’ÿÿÿÿÿHìRCRITICALZ
+s
+java:S2259§"AA "NullPointerException" could be thrown; "fis" is nullable here.(ß¶­†ÿÿÿÿÿ8íÏ¸¨ž.HßRMAJORZBUG
+f
+java:S2093‚"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ8‘•®¨ž.H×RCRITICALZ
 CODE_SMELL
 _
-java:S1148†"#Use a logger to log this exception.(Âþÿâûÿÿÿÿ8íÄìÒœ.HñRMINORZVULNERABILITY
+java:S1148©"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8íÄìÒœ.HÞRMINORZVULNERABILITY

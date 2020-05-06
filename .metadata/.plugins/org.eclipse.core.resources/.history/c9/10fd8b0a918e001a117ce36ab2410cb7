@@ -1,0 +1,8 @@
+package com.shivani.bank.models;
+
+public class BankOperations {
+	
+	public void addAccount() {
+		
+	}
+}

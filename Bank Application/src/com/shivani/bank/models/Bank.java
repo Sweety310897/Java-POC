@@ -9,13 +9,19 @@ public class Bank {
 
 
 	private HashMap<Integer,BankAccount> accountsMap = new HashMap<>();
-	private HashMap<String, Integer> ssnAccmap = new HashMap<>();
+	private HashMap<String, Integer> ssnAccMap = new HashMap<>();
 
+	/*
+	 * create a new account in the bank
+	 */
 	public void createNewAccount(BankAccount account) {
 		accountsMap.put(account.getAccountNumber(), account);
-		ssnAccmap.put(account.getSSN(), account.getAccountNumber());
+		ssnAccMap.put(account.getSSN(), account.getAccountNumber());
 	}
 
+	/*
+	 * get account number values from the map accountsmap
+	 */
 	public BankAccount getAccount(int accNumber) {
 		if(accountsMap.get(accNumber)==null) {
 			throw new AccountDetailsException("Invalid Account, We have not found the account");
@@ -23,15 +29,24 @@ public class Bank {
 		return accountsMap.get(accNumber);
 	}
 
+	/*
+	 * get social security number values from the map ssnAccmap
+	 */
 	public int getAccWithSSN(String socialSecurityNumber) {
-		return this.ssnAccmap.get(socialSecurityNumber);
+		return this.ssnAccMap.get(socialSecurityNumber);
 	}
 
+	/*
+	 * return accountsMap
+	 */
 	public Map<Integer,BankAccount> getAccountMap() {
 		return this.accountsMap;
 	}
 
+	/*
+	 * return ssnAccmap
+	 */
 	public Map<String, Integer> getSocialSecurityAccount() {
-		return this.ssnAccmap;
+		return this.ssnAccMap;
 	}
 }

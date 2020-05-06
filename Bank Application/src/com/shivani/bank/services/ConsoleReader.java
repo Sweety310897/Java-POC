@@ -9,22 +9,30 @@ import com.shivani.bank.exceptions.AccountDetailsException;
 import com.shivani.bank.exceptions.BalanceException;
 import com.shivani.bank.interfaces.InputReader;
 import com.shivani.bank.models.Bank;
-import com.shivani.bank.models.BankAccount;
+import com.shivani.bank.services.BankOperations.Choices;
 import com.shivani.bank.validations.InputValidations;
 
 public class ConsoleReader implements InputReader{
 	InputValidations validate;
 	Bank shivaniBank;
+	BankOperations bankop;
+	
 	public ConsoleReader() {
 		validate = new InputValidations();
 		shivaniBank = new Bank();
+		bankop = new BankOperations();
 	}
 	
 	LogManager lgmngr = LogManager.getLogManager();
 	Logger log = lgmngr.getLogger(Logger.GLOBAL_LOGGER_NAME);
 	Scanner scan= new Scanner(System.in);
 	static int accountNumber = 1000;
+	
+	/*
+	 * to read inputs from the console
+	 */
 	public void addAccount() {
+		
 		try {
 			log.log(Level.INFO, "Please enter name");
             String custName = scan.next();
@@ -40,100 +48,119 @@ public class ConsoleReader implements InputReader{
 			log.log(Level.INFO, "Please Enter Customer Email Id: ");
 			String custEmail = scan.next();
 			validate.checkEmail(custEmail);
-			if(shivaniBank.getSocialSecurityAccount().containsKey(aadarNumber)) {
-				log.log(Level.INFO, "Sorry Account already exists with account number: " + shivaniBank.getAccWithSSN(aadarNumber));
-			} else {
-				
-				shivaniBank.createNewAccount(new BankAccount(accountNumber++, custName, bankAccType-1, custMobileNo, custEmail, aadarNumber));
-				log.log(Level.INFO," -> Account created with account number: " + (accountNumber-1)); 
-			    
-			}
+			bankop.add(accountNumber, custName, bankAccType, custMobileNo, custEmail, aadarNumber);
+			accountNumber++;
 		}
+		
 		catch (AccountDetailsException message) {
 			log.log(Level.INFO, message.getMessage()); 
         }
 
 	}
+	
+	/*
+	 * display all accounts
+	 */
 	public void displayAll() {
-		shivaniBank.getAccountMap().forEach((k, v) -> 	log.log(Level.INFO, "Display Details\n"+ v ));
+		
+		bankop.display();
+	
 	}
+	
+	/*
+	 * read inputs for searching account
+	 */
 	public void searchByAccount() {
+		
 		log.log(Level.INFO, "Please Enter the account number you want to search: ");
 		int searchAccountNumber = scan.nextInt();
-		if(shivaniBank.getAccountMap().containsKey(searchAccountNumber)) {
-			log.log(Level.INFO, "Search Details\n" + shivaniBank.getAccount(searchAccountNumber));
-			
-		} else {
-			log.log(Level.INFO, "Sorry Search failed Account dooesn't exist..");
-		}
+		bankop.search(searchAccountNumber);
 
 	}
+	
+	/*
+	 * read inputs for deposit 
+	 */
 	public void depositAmount() {
-	 try {
-		log.log(Level.INFO, "Please Enter the account number you want to deposit: ");
-
-		int depositAccountNumber = scan.nextInt();
+	
+		try {
+			log.log(Level.INFO, "Please Enter the account number you want to deposit: ");
+			int depositAccountNumber = scan.nextInt();
 			long amount;
 			log.log(Level.INFO, "Please Enter the amount you want to Deposit : ");
 			amount = scan.nextLong();
+			bankop.deposit(depositAccountNumber,amount);
 			
-			shivaniBank.getAccount(depositAccountNumber).deposit(amount);
-
-	 }catch(AccountDetailsException | BalanceException message ) {
+		}catch(AccountDetailsException | BalanceException message ) {
 			log.log(Level.INFO, message.getMessage());
-	 }
-	}
-	public void withDrawAmount() {
-		try {	
-		log.log(Level.INFO, "Please Enter the account number you want to withdraw: ");
-		int withdrawAccountNumber = scan.nextInt();
-		long amount;
-		log.log(Level.INFO, "Please Enter the amount you want to withdraw : ");
-		amount = scan.nextLong();
-			shivaniBank.getAccount(withdrawAccountNumber).withDraw(amount);
 		}
-		catch(AccountDetailsException | BalanceException message ) {
+		
+	}
+	
+	
+	/*
+	 * read inputs to withdraw 
+	 */
+	public void withDrawAmount() {
+		
+		try {	
+			log.log(Level.INFO, "Please Enter the account number you want to withdraw: ");
+			int withdrawAccountNumber = scan.nextInt();
+			long amount;
+			log.log(Level.INFO, "Please Enter the amount you want to withdraw : ");
+			amount = scan.nextLong();
+			bankop.withDraw(withdrawAccountNumber,amount);
+			
+		}catch(AccountDetailsException | BalanceException message ) {
 			log.log(Level.INFO, message.getMessage());
-	 }
+		}
 
 	}
+	
+	/*
+	 * overriding read input method
+	 * @see com.shivani.bank.interfaces.InputReader#readInput()
+	 */
 	public void readInput()
 	{
-		int choice;
-		do
-		{
-			log.log(Level.INFO, "Main Menu\n 1.Add Account\n 2.Display All\n 3.Search By Account\n 4.Deposit\n 5.Withdrawal\n 6.Exit");
-			choice = scan.nextInt();
-			switch(choice)
-			{ 
-				case 1:
-					addAccount();
-                    break;					
-				case 2:
-					displayAll();
-					break;
+		String userInput;
+		Choices choice;
+		
+		do {
+			log.log(Level.INFO, "Please give the inputs as:\n"
+					+ "ADDACCOUNT to add the account\n" 
+					+ "DISPLAYALL to display all accounts\n"
+					+ "SEARCHBYACCOUNT to search by account\n"
+					+ "DEPOSIT to deposit into account\n"
+					+ "WITHDRAW to withdraw from the account\n"
+					+ "EXIT to end the application"
+					);
+            userInput = scan.next();
+            choice = Choices.valueOf(userInput);
 
-				case 3:
-					searchByAccount();
-					break;
+            switch (choice) {
+                case ADDACCOUNT :    	addAccount();
+                						break;
+             
+                case DISPLAYALL :		displayAll();
+                						break;
 
-				case 4:
-					depositAmount();
-					break;
-
-				case 5:
-					withDrawAmount();
-					break;
-
-				case 6:
-					log.log(Level.INFO, "Application has ended");
-					break;
-				default :
-					log.log(Level.INFO, "Correct choice has not been selected");
-					break;
-			}
-		}
-		while(choice != 6);
+                case SEARCHBYACCOUNT :	searchByAccount();
+                						break;
+                
+                case DEPOSIT :			depositAmount();
+                						break;
+                
+                case WITHDRAW :			withDrawAmount();
+                						break;
+                
+                case EXIT:				log.log(Level.INFO, "Application has ended successfully");
+                						break;
+                
+                default: break;
+            }
+        } while(choice != Choices.EXIT);
+		
 		scan.close();
 	}
 

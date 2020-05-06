@@ -21,14 +21,24 @@ public class BankAccount extends Account implements AccountOperations{
 		this.custEmailId = custEmailId;
 	}
 
+	/*
+	 * return customer email
+	 */
 	public String getCustEmail() {
 		return this.custEmailId;
 	}
 
+	/*
+	 * return phone number
+	 */
 	public String getCustPhone() {
 		return this.custPhoneNo;
 	}
 
+	/*
+	 * deposit the amount to the account
+	 * @see com.shivani.bank.interfaces.AccountOperations#deposit(long)
+	 */
 	public void deposit(long amount) {
 		if(amount > 0 ) {
 			updateAccountBalance(getAccountBalance() + amount);
@@ -39,8 +49,12 @@ public class BankAccount extends Account implements AccountOperations{
 
 	}
 
+	/*
+	 * withdraw amount from the account
+	 * @see com.shivani.bank.interfaces.AccountOperations#withDraw(long)
+	 */
 	public void withDraw(long amount) {		
-		if(amount < getAccountBalance() ) {
+		if(amount >0 && amount < getAccountBalance()  ) {
 			updateAccountBalance(getAccountBalance() - amount);
 			log.log(Level.INFO, "Amount Withdrawn successfully");
 			log.log(Level.INFO, "Remaining Balance is " + getAccountBalance());
@@ -51,6 +65,10 @@ public class BankAccount extends Account implements AccountOperations{
 	}
 
 
+	/*
+	 * overriding toString method
+	 * @see java.lang.Object#toString()
+	 */
 	public String toString() {
 		return "Name: " + getCustomerName() + "\n" + "Account Number: " + getAccountNumber() + "\n" + "Account Type: " + getAccountType() + "\n" + "Available Balance: " + getAccountBalance() + "\n" + "Mobile Number: " + getCustPhone() + "\n" + "Email id: " + getCustEmail() + "\n";
 	}

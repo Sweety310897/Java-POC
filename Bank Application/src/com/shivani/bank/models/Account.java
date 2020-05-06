@@ -17,31 +17,54 @@ public class Account {
 		this.socialSecurityNumber = socialSecurityNumber;
 	}
 
+	/*
+	 * return account number
+	 */
 	public int getAccountNumber() {
 		return this.accountNumber;
 	}
+	
+	/*
+	 * return name of the customer
+	 */
 
 	public String getCustomerName() {
 		return this.customerName;
 	}
 
+	/*
+	 * return account type of the bank
+	 */
 	public String getAccountType() {
 		return this.accountType;
 	}
 
+	/*
+	 * return account bal of the account
+	 */
 	public long getAccountBalance() {
 		return this.accountBalance;
 	}
-
+	
+	
+	/*
+	 * set account type 
+	 */
 	public void setAccountType(int type) {
 		this.accountType = accTypes[type];
 		
 	}
 
+	/*
+	 * update the balance
+	 */
 	public void updateAccountBalance(long amount) {
 		this.accountBalance = amount;
 	}
 
+	/*
+	 * return social security number
+	 */
 	public String getSSN() {
 		return this.socialSecurityNumber;
 	}
