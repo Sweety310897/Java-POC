@@ -21,7 +21,6 @@ public class PropertyFileReader implements InputReader{
 	
 	private final Logger logger = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 	Bank shivaniBank = new Bank();
-	static int accountNumber = 1000;
 	InputValidations validate = new InputValidations();
 	BankOperations bankop = new BankOperations();
 	LogManager lgmngr = LogManager.getLogManager();

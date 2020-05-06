@@ -1,0 +1,52 @@
+package com.shivani.bank.models;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import com.shivani.bank.exceptions.AccountDetailsException;
+
+public class Bank {
+
+
+	private HashMap<Integer,BankAccount> accountsMap = new HashMap<>();
+	private HashMap<String, Integer> ssnAccMap = new HashMap<>();
+
+	/*
+	 * create a new account in the bank
+	 */
+	public void createNewAccount(BankAccount account) {
+		accountsMap.put(account.getAccountNumber(), account);
+		ssnAccMap.put(account.getSSN(), account.getAccountNumber());
+	}
+
+	/*
+	 * get account number values from the map accountsMap
+	 */
+	public BankAccount getAccount(int accNumber) {
+		if(accountsMap.get(accNumber)==null) {
+			throw new AccountDetailsException("Invalid Account, We have not found the account");
+		}
+		return accountsMap.get(accNumber);
+	}
+
+	/*
+	 * get social security number values from the map ssnAccmap
+	 */
+	public int getAccWithSSN(String socialSecurityNumber) {
+		return this.ssnAccMap.get(socialSecurityNumber);
+	}
+
+	/*
+	 * return accountsMap
+	 */
+	public Map<Integer,BankAccount> getAccountMap() {
+		return this.accountsMap;
+	}
+
+	/*
+	 * return ssnAccmap
+	 */
+	public Map<String, Integer> getSocialSecurityAccount() {
+		return this.ssnAccMap;
+	}
+}

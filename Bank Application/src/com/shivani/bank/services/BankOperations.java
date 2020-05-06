@@ -1,7 +1,5 @@
 package com.shivani.bank.services;
 
-
-
 import java.util.logging.Level;
 import java.util.logging.LogManager;
 import java.util.logging.Logger;
@@ -14,8 +12,12 @@ public class BankOperations {
 	LogManager lgmngr = LogManager.getLogManager();
 	Logger log = lgmngr.getLogger(Logger.GLOBAL_LOGGER_NAME);
 	
-	int accountNumber;String custName; 
-	int bankAccType; String custMobileNo; String custEmail; String aadarNumber;
+	int accountNumber;
+	int bankAccType;
+	String custName; 
+	String custMobileNo;
+	String custEmail;
+	String aadarNumber;
 
 	public enum Choices {
         ADDACCOUNT, DISPLAYALL, SEARCHBYACCOUNT, DEPOSIT, WITHDRAW, EXIT;
@@ -26,7 +28,7 @@ public class BankOperations {
 	 */
 	public void add(int accountNumber, String custName,int bankAccType,String custMobileNo,String custEmail,String aadarNumber) {
 		
-		if(shivaniBank.getSocialSecurityAccount().containsKey(aadarNumber)) {
+		if(shivaniBank.getSecurityMap().containsKey(aadarNumber)) {
 			log.log(Level.INFO, "Sorry Account already exists with account number: " + shivaniBank.getAccWithSSN(aadarNumber));
 		} else {
 			BankAccount bankaccount = new BankAccount(accountNumber, custName, bankAccType-1, custMobileNo, custEmail, aadarNumber);

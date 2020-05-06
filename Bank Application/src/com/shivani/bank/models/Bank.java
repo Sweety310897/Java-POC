@@ -20,7 +20,7 @@ public class Bank {
 	}
 
 	/*
-	 * get account number values from the map accountsmap
+	 * get account number values from the map accountsMap
 	 */
 	public BankAccount getAccount(int accNumber) {
 		if(accountsMap.get(accNumber)==null) {
@@ -46,7 +46,7 @@ public class Bank {
 	/*
 	 * return ssnAccmap
 	 */
-	public Map<String, Integer> getSocialSecurityAccount() {
+	public Map<String, Integer> getSecurityMap() {
 		return this.ssnAccMap;
 	}
 }

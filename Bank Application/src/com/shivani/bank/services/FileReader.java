@@ -16,7 +16,6 @@ import com.shivani.bank.validations.InputValidations;
 public class FileReader implements InputReader{
 	private final Logger logger = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 	Bank shivaniBank;
-	static int accountNumber = 1000;
 	InputValidations validate;
 	BankOperations bankop;
 	

@@ -26,7 +26,11 @@ public class ConsoleReader implements InputReader{
 	LogManager lgmngr = LogManager.getLogManager();
 	Logger log = lgmngr.getLogger(Logger.GLOBAL_LOGGER_NAME);
 	Scanner scan= new Scanner(System.in);
-	static int accountNumber = 1000;
+	static int accountNumber;
+	
+	static {
+		accountNumber = 1000;
+	}
 	
 	/*
 	 * to read inputs from the console
@@ -49,13 +53,16 @@ public class ConsoleReader implements InputReader{
 			String custEmail = scan.next();
 			validate.checkEmail(custEmail);
 			bankop.add(accountNumber, custName, bankAccType, custMobileNo, custEmail, aadarNumber);
-			accountNumber++;
-		}
+			accountNumber();
 		
-		catch (AccountDetailsException message) {
+		} catch (AccountDetailsException message) {
 			log.log(Level.INFO, message.getMessage()); 
         }
 
+	}
+	
+	public static void accountNumber() {
+		accountNumber++;
 	}
 	
 	/*

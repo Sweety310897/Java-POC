@@ -40,7 +40,7 @@ public class Account {
 	}
 
 	/*
-	 * return account bal of the account
+	 * return account balance of the account
 	 */
 	public long getAccountBalance() {
 		return this.accountBalance;
